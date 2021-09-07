@@ -8,7 +8,7 @@ import (
 )
 
 func TestMaximumToys(t *testing.T) {
-	c, err := ioutil.ReadFile("testcase.txt")
+	c, err := ioutil.ReadFile("../../testcase.txt")
 	if err != nil {
 		panic(err)
 	}

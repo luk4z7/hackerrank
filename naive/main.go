@@ -39,6 +39,7 @@ func main() {
 	p(pos2)
 }
 
+// naive with only one for
 func naive2(list []int, target int) []int {
 	var positions []int
 	var data []int

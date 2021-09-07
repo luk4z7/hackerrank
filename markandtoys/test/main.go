@@ -61,6 +61,10 @@ func InsertionSortInt(list []int32) {
 func insert(sorted []int32, item int32) []int32 {
 	for i, sortedItem := range sorted {
 		if item < sortedItem {
+			// https://github.com/golang/go/wiki/SliceTricks
+			// 1, 2, 3      4    + 5, 6, 7
+			// sorted[:i] + item + sorted[i:]
+			// a = append(a[:i], append(make([]T, j), a[i:]...)...)
 			return append(sorted[:i], append([]int32{item}, sorted[i:]...)...)
 		}
 	}
